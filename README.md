@@ -18,6 +18,12 @@ STL Manager is a self serving web application intended to facilitate easy viewin
 keeping, and use of STL files for 3D printing. The applicaiton is intended to
 run on a Linux based workstation connected to a 3D printer.
 
+
+PLEASE NOTE: This is a hobby application for me. I don't intend on updating or adding
+additional support or functions. I'm not likely to address usage issues. If you'd
+like to expand functions or encounter issues that need code revision, you're free to
+fork as long as you adhere to the license.
+
 The application is a Python Flask web application that serves and references STL
 files from a specified network share. The application allows the user to browse
 and search for STL file projects, see the associate files, displays the images
