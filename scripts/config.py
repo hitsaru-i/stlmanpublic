@@ -1,0 +1,2 @@
+EXTRACTED_LOCATION = '/mnt/stlshare/UNZIPPED'
+ZIPPED_LOCATION = '/mnt/stlshare/RAWZIPS'

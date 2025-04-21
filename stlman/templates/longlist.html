@@ -1,0 +1,33 @@
+<html>
+<head><title>{{ title }} - STLMAN</title>
+</head>
+<body>
+{% include '_style.html' %}
+<h1><center>STL Manager Test: {{ page }}</h1></center>
+
+<br>
+<br>
+<a href='/index'>Home</a>
+<br>
+<br>
+{% for data in alldata %}
+{% set object = ((data[1]).strip()) %}
+{% set filepage = '/filepage/'+object %}
+{% if ('.txt' not in object) %}
+<a href={{filepage}}>{{object}}</a><br>
+<!-- {{ object }}<br> -->
+{% endif %}
+{% endfor %}
+<!-- <a href='/longpage'>Long Page</a>
+<br><br>
+<a href='/dirlist'>Directory List</a>
+<br>
+<br>
+<a href='/search'>Search</a>
+<br>
+<br>
+<!-- <a href='/filecall'>OpenCura</a> -->
+ <br>
+<br>
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* General body styling to replace text="white" and bgcolor="black" */
+body {
+	color: white;
+	background-color: black;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* Header style for consistent branding */
+
+header {
+	background-color: #444;
+	color: #fff;
+	padding: 1rem;
+	text-align: center;
+	margin: 0;
+}
+nav, .flex {
+	display:flex;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+/* Content container */
+.container {
+	margin: 2rem auto;
+	max-width: 1000px;
+	padding: 1rem;
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	color: #333;
+}
+.history {
+	margin: 2em 3em;
+}
+
+/* Link styling (modernized version of your original) */
+a { background-color: transparent; }
+a:link {
+	color: white;
+	text-decoration: none;
+}
+a:visited {
+	color: yellow;
+	text-decoration: none;
+}
+a:hover {
+	color: orange;
+	text-decoration: underline;
+}
+a:active {
+	color: blue;
+	text-decoration: underline;
+}
+.darklinks a { color: #212121; }
+
+
+/** Set up image grid **/
+.image-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+.image-cell {
+	flex: 0 0 30%;
+	box-sizing: border-box;
+	padding: 0.5rem;
+	background-color: #222;
+	border-radius: 6px;
+	text-align: center;
+}
+
+.image-cell img {
+	max-width: 100%;
+	max-height: 200px;
+	object-fit: cover;
+	border-radius: 4px;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ page }}</h1>
+
+<!-- Pagination Controls (Top) -->
+<div style="margin-bottom: 1em;">
+  {% if currentpage > 1 %}
+    <a href="{{ url_for('main.paginate', page=currentpage - 1) }}">Previous</a>
+  {% endif %}
+  Page {{ currentpage }} of {{ pages }}
+  {% if currentpage < pages %}
+    <a href="{{ url_for('main.paginate', page=currentpage + 1) }}">Next</a>
+  {% endif %}
+</div>
+
+<!-- Results Table -->
+<table border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Project Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in data %}
+    <tr>
+      <td><a href="{{ url_for('main.filepage2', file=row['Project']) }}">{{ row['Project'] }}</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<!-- Pagination Controls (Bottom) -->
+<div style="margin-top: 1em;">
+  {% if currentpage > 1 %}
+    <a href="{{ url_for('main.paginate', page=currentpage - 1) }}">Previous</a>
+  {% endif %}
+  Page {{ currentpage }} of {{ pages }}
+  {% if currentpage < pages %}
+    <a href="{{ url_for('main.paginate', page=currentpage + 1) }}">Next</a>
+  {% endif %}
+</div>
+{% endblock %}

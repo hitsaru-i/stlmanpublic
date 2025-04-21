@@ -1,0 +1,27 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="history">
+<h1>Historical data for selected:</h1>
+{% for data in historydata %}
+{% set date = (data[2]) %}
+{% set infillpercent = (data[3]) %}
+{% set infilltype = (data[4]) %}
+{% set plastictype = (data[5]) %}
+{% set assessment = (data[6]) %}
+{% set note = (data[7]) %}
+<!-- {{data}}<br><br> -->
+<b>Manufacture Date:</b> {{date}}<br>
+<b>Infill Percentage:</b> {{infillpercent}}<br>
+<b>Infill Type:</b> {{infilltype}}<br>
+<b>Plastic Used:</b> {{plastictype}}<br>
+<b>General assessment:</b><br>
+{{assessment}}<br>
+<b>Note:</b><br>
+{{note}}<br>
+<hr><br>
+
+{% endfor %}
+</body></html>

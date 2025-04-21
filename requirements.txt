@@ -1,0 +1,7 @@
+# requirements.txt for STLman Flask App
+
+Flask==2.3.2
+Flask-SQLAlchemy==3.1.1
+Werkzeug==2.3.3  # Flask dependency, explicitly pinned for compatibility
+gunicorn==21.2.0  # Optional: production WSGI server
+python-dotenv==1.0.1  # For managing .env files during development

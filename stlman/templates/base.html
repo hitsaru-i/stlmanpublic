@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>STLMAN - {{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>STL Manager Test: {{ page }}</h1> 
+        <nav>
+            <a href='/index'>Home</a>
+            <a href='/longlist'>Long list(default sort)</a>
+            <a href=/paginate>Paginated List</a>
+            <a href='/searchform'>Search</a>
+            <a href='/updatedb'>Update Database</a>
+            <a href="javascript:window.history.back();">&lt; Back</a>
+        </nav>
+    </header>
+
+{%block content %}{% endblock %}
+
+</body>
+</html>

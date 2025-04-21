@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h2>Project: {{ file }}</h2>
+
+	<div class="container">
+		<h3>Image Gallery</h3>
+		<div class="image-grid">
+			{% for i in imglist %}
+			<div class="image-cell">
+				<img src="/image/{{ file }}/{{ i }}" alt="{{ i }}" title="{{ i }}">
+			</div>
+			{% endfor %}
+		</div>
+
+		<h3>Associated Files</h3>
+		<ul>
+			{% for f in filelist %}
+			<li>
+				{{ f }}
+
+				{# --- CURA Launch Button for Each File (New Feature) --- #}
+				<form action="/runcura" method="post" style="display:inline;">
+					<input type="hidden" name="filepath" value="{{ filesdir }}/{{ f }}">
+					<button type="submit">Launch in Cura</button>
+				</form>
+			</li>
+			{% endfor %}
+		</ul>
+
+		<h3>History</h3>
+		<div class="flex darklinks">
+			<a href="#" onClick="MyWindow=window.open('/history/{{rowid}}', 'MyWindow', 'width=800,height=800'); return false;">View History</a>
+
+			<a href="#" onClick="MyWindow=window.open('/updatehistory/{{rowid}}', 'MyWindow', 'width=800,height=800'); return false;">Update History</a>
+		</div>
+
+	</div>
+{% endblock %}

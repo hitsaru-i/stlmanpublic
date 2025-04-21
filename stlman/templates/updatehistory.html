@@ -1,0 +1,31 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="history">
+<h1>Update History</h1>
+<p>Input data below to create a history record of a print for this project. You may wish to specify the exact stl in your notes.</p><br>
+<br>
+<!-- {% set actionpage = '/updateaction/'+rowid %} -->
+<form action="{{ url_for('main.updateaction') }}" method="post">
+<!-- <form action ={{actionpage}} method="post"> -->
+<label for="rowid">rowid:<label><br>
+<input type='number' id='rowid' name='rowid' value={{rowid}}><br><br>
+<label for="Date">Manufacture Date:</label><br>
+<input type="date" id="Date" name="Date"><br><br>
+<label for="InfillPercent">Infill Percent:</label><br>
+<input type="number" id="InfillPercent" name="InfillPercent"><br><br>
+<label for="InfillPattern">Infill Pattern:</label><br>
+<input type="text" id="InfillPattern" name="InfillPattern"><br><br>
+<label for="PlasticType">Plastic Type:</label><br>
+<input type="text" id="PlasticType" name="PlasticType"><br><br>
+<label for="Assessment">Assessment:</label><br>
+<input type="text" id="Assessment" name="Assessment"><br><br>
+<label for="Note">Note</label><br>
+<input type="text" id="Note" name="Note"><br><br>
+
+<br>
+<br>
+<input type="submit" value="Submit">
+</body></html>

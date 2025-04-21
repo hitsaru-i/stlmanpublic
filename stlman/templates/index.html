@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+        <p>Welcome to STL Manager.</p>
+	<br>
+	<p> Hello, friend. STLMan is here to help you manage and run your 3D printing stuffs.</p>
+	<br>
+	<p>Your Navigation:</p>
+	<ul>
+	<li> Home (that's here).
+	<li> Longlist will return a page with every entry in your database (use with caution, intended for small databases).
+	<li> Paginate will display a list of entries in smaller lists (more suitable for larger databases).
+	<li> Search will return a long list of every entry that matches your query. Can be long.
+	<li> Update Database will run the database update script
+	</ul>
+
+	<br>
+	<p>Note that this application uses CURA slicer and will require you have it installed.</p>
+	<br>
+	<br><p>
+	Developed by Ian Hill, 2024-2025 with contributions from Connie Hill and ChatGPT.
+	</p>
+		<br>
+</div>
+{% endblock %}
